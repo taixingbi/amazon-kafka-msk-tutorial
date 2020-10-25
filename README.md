@@ -6,6 +6,21 @@ z-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-3.awsk
 b-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094,b-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094,b-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094
 
 ### topic AWSKafkaTutorialTopic
+
+###### create topic
+bin/kafka-topics.sh --create --zookeeper ZookeeperConnectString --replication-factor 3 --partitions 1 --topic AWSKafkaTutorialTopic
+
+```
+bin/kafka-topics.sh --create --zookeeper z-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181 --replication-factor 3 --partitions 1 --topic AWSKafkaTutorialTopic
+
+bin/kafka-topics.sh --create --zookeeper z-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181 --replication-factor 3 --partitions 1 --topic test
+
+bin/kafka-topics.sh --create --zookeeper z-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181 --replication-factor 3 --partitions 1 --topic test
+
+bin/kafka-topics.sh --create --zookeeper z-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181 --replication-factor 3 --partitions 1 --topic test
+```
+
+
 ###### produce
 ./kafka-console-producer.sh --broker-list BootstrapBrokerStringTls --producer.config client.properties --topic AWSKafkaTutorialTopic
 

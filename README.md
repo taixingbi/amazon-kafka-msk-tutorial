@@ -1,81 +1,34 @@
 
-### run pip shell
-```
-python3 -m venv myvenv
-source myvenv/bin/activate
-pip install -r requirements.txt
-```
+#### ZookeeperConnectString
+z-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181
 
-### run migrate
-##### packaging up your model changes
+#### BootstrapBrokerStringTls
+b-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094,b-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094,b-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094
+
+### topic AWSKafkaTutorialTopic
+###### produce
+./kafka-console-producer.sh --broker-list BootstrapBrokerStringTls --producer.config client.properties --topic AWSKafkaTutorialTopic
+
 ```
-python manage.py makemigrations 
-```
-##### applying those to your database.
-```
-python manage.py migrate 
+./kafka-console-producer.sh --broker-list b-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094,b-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094,b-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094 --producer.config client.properties --topic AWSKafkaTutorialTopic
 ```
 
-
-### run local
+###### consumer
+./kafka-console-consumer.sh --bootstrap-server BootstrapBrokerStringTls --consumer.config client.properties --topic AWSKafkaTutorialTopic --from-beginning
 ```
-python manage.py runserver 0.0.0.0:8083
-```
-
-### run aws ubuntu 18.04
-https://www.digitalocean.com/community/tutorials/how-to-install-the-django-web-framework-on-ubuntu-18-04
-```
-python3.6 -m venv my_env
-source my_env/bin/activate
+./kafka-console-consumer.sh --bootstrap-server b-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094,b-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094,b-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094 --consumer.config client.properties --topic AWSKafkaTutorialTopic --from-beginning
 ```
 
-### run docker
-```
-docker-compose build
-docker-compose up 
-```
+### topic webCollectData
+###### produce
+./kafka-console-producer.sh --broker-list BootstrapBrokerStringTls --producer.config client.properties --topic webCollectData
 
-python manage.py runserver 0.0.0.0:8083
-http://localhost:8000/
-
-
-### access container
 ```
-docker exec -it containerId bash   
+./kafka-console-producer.sh --broker-list b-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094,b-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094,b-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094 --producer.config client.properties --topic webCollectData
 ```
 
-### more docker 
+###### consumer
+./kafka-console-consumer.sh --bootstrap-server BootstrapBrokerStringTls --consumer.config client.properties --topic webCollectData --from-beginning
 ```
-docker stop $(docker ps -aq)    
-docker rm $(docker ps -aq)    
-docker rmi $(docker images -q)
+./kafka-console-consumer.sh --bootstrap-server b-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094,b-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094,b-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094 --consumer.config client.properties --topic webCollectData --from-beginning
 ```
-
-
-### reference
-https://hub.docker.com/_/django/   
-https://docs.docker.com/compose/django/
-
-### ssh
-ssh -i "demo.pem" ubuntu@ec2-3-230-163-203.compute-1.amazonaws.com
-
-
-### mount
-sshfs ubuntu@ec2-3-230-163-203.compute-1.amazonaws.com:/home/ubuntu/transcription-api ~/transcribe-server/local_share -o IdentityFile=~/transcribe-server/demo.pem -o  allow_other 
-
-https://howchoo.com/g/ymmxmzlmndb/how-to-install-sshfs
-
-### run
-http://3.81.137.95:8083/
-
-
-### permit
-
-chmod -R 777 
-
-
-
-
-
-
-

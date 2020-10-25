@@ -15,9 +15,9 @@ bin/kafka-topics.sh --create --zookeeper z-2.awskafkatutorialclust.bwvs6a.c10.ka
 
 bin/kafka-topics.sh --create --zookeeper z-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181 --replication-factor 3 --partitions 1 --topic test
 
-bin/kafka-topics.sh --create --zookeeper z-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181 --replication-factor 3 --partitions 1 --topic test
+bin/kafka-topics.sh --create --zookeeper z-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181 --replication-factor 3 --partitions 1 --topic webRecordVideo
 
-bin/kafka-topics.sh --create --zookeeper z-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181 --replication-factor 3 --partitions 1 --topic test
+bin/kafka-topics.sh --create --zookeeper z-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181 --replication-factor 3 --partitions 1 --topic kadenAudioTranscirbe
 ```
 
 

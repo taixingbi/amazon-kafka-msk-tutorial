@@ -22,8 +22,13 @@ bin/kafka-topics.sh --create --zookeeper z-2.awskafkatutorialclust.bwvs6a.c10.ka
 ##### jvm
 ```
 java-1.8.0-openjdk-1.8.0.302.b08-0.amzn2.0.1.x86_64
-User the Trust store: 
+-- User the Trust store 
 cp /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.302.b08-0.amzn2.0.1.x86_64/jre/lib/security/cacerts /tmp/kafka.client.truststore.jks
+
+-- client.properties
+security.protocol=SSL 
+ssl.truststore.location=/tmp/kafka.client.truststore.jks
+
 
 
 ```

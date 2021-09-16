@@ -19,6 +19,11 @@ bin/kafka-topics.sh --create --zookeeper z-2.awskafkatutorialclust.bwvs6a.c10.ka
 
 ```
 
+##### jvm
+```
+java-1.8.0-openjdk-1.8.0.302.b08-0.amzn2.0.1.x86_64
+```
+
 
 ###### produce
 ./kafka-console-producer.sh --broker-list BootstrapBrokerStringTls --producer.config client.properties --topic AWSKafkaTutorialTopic

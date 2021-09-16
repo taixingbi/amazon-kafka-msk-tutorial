@@ -17,6 +17,8 @@ bin/kafka-topics.sh --create --zookeeper ZookeeperConnectString --replication-fa
 ```
 bin/kafka-topics.sh --create --zookeeper z-3.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:2181,z-2.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:2181,z-1.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:2181 --replication-factor 3 --partitions 1 --topic mp.inventory.v1
 
+bin/kafka-topics.sh --create --zookeeper z-3.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:2181,z-2.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:2181,z-1.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:2181 --replication-factor 3 --partitions 1 --topic mp.inventory.v1
+
 bin/kafka-topics.sh --create --zookeeper z-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181,z-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:2181 --replication-factor 3 --partitions 1 --topic test
 
 

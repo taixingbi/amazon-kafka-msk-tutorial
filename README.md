@@ -12,7 +12,7 @@ b-1.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:9094,b-2.test-cluster
 ### topic AWSKafkaTutorialTopic
 
 ###### create topic
-bin/kafka-topics.sh --create --zookeeper ZookeeperConnectString --replication-factor 3 --partitions 1 --topic AWSKafkaTutorialTopic
+bin/kafka-topics.sh --create --zookeeper ZookeeperConnectString --replication-factor 2 --partitions 1 --topic AWSKafkaTutorialTopic
 
 ```
 bin/kafka-topics.sh --create --zookeeper z-3.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:2181,z-2.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:2181,z-1.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:2181 --replication-factor 3 --partitions 1 --topic mp.inventory.v1

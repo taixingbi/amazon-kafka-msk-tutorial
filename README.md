@@ -1,10 +1,13 @@
 
 #### ZookeeperConnectString
+```
 z-3.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:2181,z-2.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:2181,z-1.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:2181
-
+```
 
 #### BootstrapBrokerStringTls
-b-1.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094,b-2.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094,b-3.awskafkatutorialclust.bwvs6a.c10.kafka.us-east-1.amazonaws.com:9094
+```
+z-3.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:2182,z-2.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:2182,z-1.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:2182
+```
 
 ### topic AWSKafkaTutorialTopic
 

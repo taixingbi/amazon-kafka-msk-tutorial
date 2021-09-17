@@ -1,6 +1,8 @@
 
 #### basic 
 ```
+ssh -i "perm.pem" ec2-user@ec2-18-223-133-30.us-east-2.compute.amazonaws.com
+
 ./kafka-console-producer.sh --broker-list b-1.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:9094,b-2.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:9094 --producer.config client.properties --topic mp.inventory.v1
 
 ./kafka-console-consumer.sh --bootstrap-server b-1.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:9094,b-2.test-cluster-1.qvtxwq.c7.kafka.us-east-2.amazonaws.com:9094 --consumer.config client.properties --topic mp.inventory.v1 --from-beginning
